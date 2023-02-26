@@ -1,0 +1,53 @@
+version: 2
+
+sources:
+  - name: adventureworks-378020 
+    description: Banco réplica do erp da adventureworks
+    schema: sap_adw
+    tables:
+      - name: creditcard
+        description: Uma linha por pedido. Inclui pedidos cancelados e deletados.  
+        columns:
+          - name: creditcardid
+            description: 'sdfsd' 
+            tests:
+            - unique
+            - not_null  					
+          - name: cardtype
+            description: 'sdfsd'           				
+          - name: cardnumber 
+            description: 'sdfsd'       
+          - name: expmonth
+            description: 'sdfsd' 
+          - name: expyear
+            description: 'sdfsd' 
+          - name: modifieddate
+            description: 'sdfsd' 
+
+      - name: customer
+
+      - name: address
+
+      - name: stateprovince
+
+      - name: currency
+
+      - name: salesorderdetail
+
+      - name: salesorderheader
+
+      - name: salesorderheadersalesreason
+
+      - name: countryregion
+
+      - name: person
+
+      - name: product
+
+      - name: productcategory
+
+      - name: productsubcategory
+
+      - name: currencyrate
+
+      - name: salesreason
