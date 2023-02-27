@@ -29,7 +29,12 @@ with
         from {{ ref('dim_razao') }}
     )
 
-    joined as (
+    , razao as (
+        select *
+        from {{ ref('int_vendas') }}
+    )
+
+    , joined as (
         select *
         from vendas
         left join cambio on vendas.sk_cambio = cambio.sk_cambio 
@@ -39,3 +44,6 @@ with
         left join produtos on vendas.sk_produtos = produtos.sk_produtos   
         left join razao on vendas.sk_razao = razao.sk_razao    
     )
+
+select *
+from joined

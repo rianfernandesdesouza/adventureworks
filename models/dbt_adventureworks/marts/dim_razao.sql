@@ -13,7 +13,6 @@ with
         select
         pedidos_vendas_razao_header.id_pedidos_vendas
         , pedidos_vendas_razao_header.id_razao_vendas
-        , razao_vendas.id_razao_vendas
         , razao_vendas.nome_razao_vendas
         , razao_vendas.tipo_razao
         from pedidos_vendas_razao_header

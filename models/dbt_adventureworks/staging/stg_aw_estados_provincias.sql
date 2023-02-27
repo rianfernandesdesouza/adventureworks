@@ -2,7 +2,7 @@ with
     source_estados_provincias as (
         select
             cast(stateprovinceid as int) as id_estado_provincia				
-            , cast(stateprovincecode as string) as	codigo_estado_privincia			
+            , cast(stateprovincecode as string) as	codigo_estado_provincia			
             , cast(countryregioncode as string) as codigo_pais_regiao				
             , cast(isonlystateprovinceflag as int) as is_somente_estado_provincia_flag 				
             , cast(name	as string) as nome_estado_provincia  				

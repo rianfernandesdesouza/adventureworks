@@ -30,16 +30,14 @@ with
     )
 
     , pedidos_vendas_detalhes as (
-        select
-            id_pedidos_vendas  			
-            , id_pedidos_vendas_detalhes  			
+        select  			
+            id_pedidos_vendas_detalhes  			
             , numero_rastreamento_operadora  			
             , quantidade_pedido 			
             , id_produto 			
             , id_oferta_especial 			
             , preco_unitario 			
-            , preco_unitario_desconto 			
-            , rowguid   			
+            , preco_unitario_desconto 			  			
             , data_modificacao_pedidos_vendas_detalhes 
         from {{ ref('stg_aw_pedidos_vendas_detalhes') }}
     )
@@ -47,14 +45,15 @@ with
     , joined as (
         select *
         from pedidos_vendas_header
-        left join pedidos_vendas_detalhes on pedidos_vendas_header.id_pedidos_vendas = pedidos_vendas_detalhes.id_pedidos_vendas 
+        left join pedidos_vendas_detalhes on pedidos_vendas_header.id_pedidos_vendas = pedidos_vendas_detalhes.id_pedidos_vendas_detalhes 
     )
 
     , transformacoes as (
         select 
-        {{ dbt_utils.surrogate_key(['id_razao_vendas','id_pedidos_vendas_detalhes']) }} as sk_vendas 
+        {{ dbt_utils.surrogate_key(['id_pedidos_vendas','id_pedidos_vendas_detalhes']) }} as sk_vendas 
         ,*
-        from vendas 
-
+        from joined 
+    )
+    
 select*
 from joined 

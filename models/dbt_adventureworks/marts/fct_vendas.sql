@@ -34,7 +34,7 @@ with
         from {{ ref('int_vendas') }}
     )
 
-    joined as (
+    , joined as (
         select
             id_pedidos_vendas				
             , numero_revisao 				
@@ -73,12 +73,16 @@ with
             , clientes.sk_clientes as fk_clientes
             , localizacoes.sk_localizacoes as fk_localizacoes
             , produtos.sk_produtos as fk_produtos
-            , razao.sk_razao as fk_razao    
+            , razao.sk_razao as fk_razao
+        
         from vendas
-        left join cambio on pedidos_vendas_header.id_taxa_cambio = cambio.id_taxa_cambio    
-        left join cartoes on pedidos_vendas_header.id_cartao_credito = cartoes.id_cartao_credito    
-        left join clientes on pedidos_vendas_header.id_entidade_negocio = clientes.id_entidade_negocio  
-        left join localizacoes on pedidos_vendas_header.id_conta_para_endereco = localizacoes.id_endereco    
-        left join produtos on pedidos_vendas_header.id_produto = produtos.id_produto     
-        left join razao on pedidos_vendas_header.id_razao_vendas = razao.id_razao_vendas    
+        left join cambio on vendas.id_taxa_cambio = cambio.id_taxa_cambio    
+        left join cartoes on vendas.id_cartao_credito = cartoes.id_cartao_credito    
+        left join clientes on vendas.id_entidade_negocio = clientes.id_entidade_negocio  
+        left join localizacoes on vendas.id_conta_para_endereco = localizacoes.id_endereco    
+        left join produtos on vendas.id_produto = produtos.id_produto     
+        left join razao on vendas.id_razao_vendas = razao.id_razao_vendas    
     )
+
+select *
+from joined 

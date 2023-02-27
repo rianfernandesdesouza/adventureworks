@@ -39,7 +39,7 @@ with
         select 
         {{ dbt_utils.surrogate_key(['id_taxa_cambio']) }} as sk_cambio 
         ,*
-        from cambio
+        from join_para
     )
 
 select *
