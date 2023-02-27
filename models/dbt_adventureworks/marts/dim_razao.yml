@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_razao 
+    columns:
+      - name: sk_razao
+        tests:
+        - unique
+        - not_null
+      - name: id_razao_vendas 
+      - name: id_pedidos_vendas 						
+      - name: data_modificacao_pedidos_vendas_razao_header
+      - name: id_razao_vendas  				
+      - name: nome_razao_vendas   				
+      - name: tipo_razao   				
+      - name: data_modificacao_razao_vendas  

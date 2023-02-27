@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_cartoes 
+    columns:
+      - name: sk_cartoes 
+        tests:
+        - unique
+        - not_null
+      - name: id_cartao_credito 	
+      - name: tipo_cartao				
+      - name: numero_cartao					
+      - name: mes_expedicao				
+      - name: ano_expedicao 					
+      - name: data_modificacao_cartao

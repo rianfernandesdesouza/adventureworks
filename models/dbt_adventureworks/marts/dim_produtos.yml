@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: dim_produtos 
+    columns:
+      - name: sk_produtos
+        tests:
+        - unique
+        - not_null
+      - name: id_produto 	
+      - name: nome_produto  				
+      - name: numero_produto  				
+      - name: makeflag  				
+      - name: produtos_acabados  				
+      - name: cor_produto  				
+      - name: nivel_estoque_seguranca  				
+      - name: ponto_reabastecimento 				
+      - name: custo_padrao  				
+      - name: preco_lista  				
+      - name: tamanho_produto  				
+      - name: codigo_mensuracao_tamanho_unitario				
+      - name: codigo_mensuracao_peso_unitario  				
+      - name: peso_produto				
+      - name: dias_para_fabricar 				
+      - name: linha_produto 				
+      - name: classe_produto			
+      - name: estilo_produto  				
+      - name: id_subcategoria_produto  				
+      - name: id_modelo_produto  				
+      - name: data_inicio_vendas 				
+      - name: data_final_vendas 				
+      - name: data_descontinuado 				
+      - name: rowguid   				
+      - name: data_modificacao_produtos 
+      - name: id_categoria_produto				
+      - name: nome_categoria_produto  				
+      - name: rowguid    				
+      - name: data_modificacao_produtos_categorias  
+      - name: id_subcategoria_produto 				
+      - name: id_categoria_produto				
+      - name: nome_subcategoria_produto				
+      - name: rowguid   				
+      - name: data_modificacao_produtos_subcategorias

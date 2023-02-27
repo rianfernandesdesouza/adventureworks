@@ -5,49 +5,117 @@ sources:
     description: Banco réplica do erp da adventureworks
     schema: sap_adw
     tables:
-      - name: creditcard
-        description: Uma linha por pedido. Inclui pedidos cancelados e deletados.  
+      - name: creditcard 
         columns:
           - name: creditcardid
-            description: 'sdfsd' 
             tests:
             - unique
-            - not_null  					
+            - not_null 
+             					
           - name: cardtype
-            description: 'sdfsd'           				
-          - name: cardnumber 
-            description: 'sdfsd'       
+
+          - name: cardnumber
+
           - name: expmonth
-            description: 'sdfsd' 
+
           - name: expyear
-            description: 'sdfsd' 
+
           - name: modifieddate
-            description: 'sdfsd' 
 
       - name: customer
+        columns:
+          - name: customerid
+            tests:
+            - unique
+            - not_null
 
-      - name: address
+      - name: address 
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: stateprovince
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: currency
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: salesorderdetail
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: salesorderheader
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: salesorderheadersalesreason
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: countryregion
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: person
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: product
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: productcategory
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
       - name: productsubcategory
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
 
-      - name: currencyrate
-
-      - name: salesreason
+      - name: currencyrate 
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null
+            
+      - name: salesreason 
+        columns:
+          - name: creditcardid
+            tests:
+            - unique
+            - not_null

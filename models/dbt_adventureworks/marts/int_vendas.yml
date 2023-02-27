@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: int_vendas 
+    columns:
+      - name: sk_vendas 
+        tests:
+        - unique
+        - not_null
+
+      - name: id_pedidos_vendas				
+      - name: numero_revisao 				
+      - name: data_pedido 				
+      - name: data_vencimento 				
+      - name: data_envio				
+      - name: status_pedido  				
+      - name: flag_pedido_online				
+      - name: numero_pedido_compra				
+      - name: numero_conta				
+      - name: id_cliente 				
+      - name: id_pessoa_venda				
+      - name: id_territorio  				
+      - name: id_conta_para_endereco 				
+      - name: id_envio_para_endereco 				
+      - name: id_metodo_envio 				
+      - name: id_cartao_credito				
+      - name: codigo_aprovacao_cartao_credito				
+      - name: id_taxa_cambio				
+      - name: subtotal   				
+      - name: valor_imposto 				
+      - name: frete 				
+      - name: total_devido 				
+      - name: comentario 				
+      - name: rowguid  				
+      - name: data_modificacao_pedidos_vendas_header
+      - name: id_pedidos_vendas  			
+      - name: id_pedidos_vendas_detalhes  			
+      - name: numero_rastreamento_operadora  			
+      - name: quantidade_pedido 			
+      - name: id_produto 			
+      - name: id_oferta_especial 			
+      - name: preco_unitario 			
+      - name: preco_unitario_desconto 			
+      - name: rowguid   			
+      - name: data_modificacao_pedidos_vendas_detalhes

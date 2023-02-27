@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_cambio 
+    columns:
+      - name: sk_cambio
+        tests:
+        - unique
+        - not_null
+      - name: id_taxa_cambio
+      - name: data_taxa_cambio 				
+      - name: codigo_cambio_de 				
+      - name: codigo_cambio_para 				
+      - name: taxa_media 				
+      - name: taxa_final_dia 				
+      - name: data_modificacao_taxas_cambio  
+      - name: codigo_cambio   			
+      - name: nome_moeda   			
+      - name: data_modificacao_moedas 

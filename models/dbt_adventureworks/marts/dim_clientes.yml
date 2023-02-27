@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_clientes 
+    columns:
+      - name: sk_clientes
+        tests:
+        - unique
+        - not_null
+      - name: id_cliente
+      - name: id_pessoa  				
+      - name: id_loja   				
+      - name: id_territorio  				
+      - name: rowguid   				
+      - name: data_modificacao_clientes 
+      - name: id_entidade_negocio 				
+      - name: tipo_pessoa 				
+      - name: estilo_nome  				
+      - name: titulo  				
+      - name: primeiro_nome  				
+      - name: nome_meio  				
+      - name: ultimo_nome  				
+      - name: sufixo  				
+      - name: promocao_email  				
+      - name: info_contato_adicional 				
+      - name: demografia  				
+      - name: rowguid   				
+      - name: data_modificacao_pessoas 

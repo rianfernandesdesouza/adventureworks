@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_localizacoes 
+    columns:
+      - name: sk_localizacoes	 
+        tests:
+        - unique
+        - not_null
+      - name: id_endereco
+      - name: linha_endereco_1 				
+      - name: linha_endereco_2 				
+      - name: cidade 				
+      - name: id_estado_provincia  				
+      - name: codigo_postal 				
+      - name: localizacao_espacial  				
+      - name: rowguid  				
+      - name: data_modificacao_enderecos
+      - name: id_estado_provincia				
+      - name: codigo_estado_privincia			
+      - name: codigo_pais_regiao				
+      - name: is_somente_estado_provincia_flag 				
+      - name: nome_estado_provincia  				
+      - name: id_territorio  				
+      - name: rowguid   				
+      - name: data_modificacao_estados_provincias
+      - name: codigo_pais_regiao 			
+      - name: nome_pais_regiao 			
+      - name: data_modificacao_pais_regiao 
