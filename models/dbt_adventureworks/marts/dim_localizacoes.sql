@@ -27,7 +27,6 @@ with
         , estados_provincias.codigo_pais_regiao
         , estados_provincias.is_somente_estado_provincia_flag
         , estados_provincias.nome_estado_provincia
-        , estados_provincias.id_territorio 
         , pais_regiao.nome_pais_regiao
         from enderecos
         left join estados_provincias on enderecos.id_estado_provincia = estados_provincias.id_estado_provincia

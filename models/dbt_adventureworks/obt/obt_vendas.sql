@@ -29,20 +29,20 @@ with
         from {{ ref('dim_razao') }}
     )
 
-    , razao as (
+    , vendas as (
         select *
-        from {{ ref('int_vendas') }}
+        from {{ ref('fct_vendas') }}
     )
 
     , joined as (
         select *
         from vendas
-        left join cambio on vendas.sk_cambio = cambio.sk_cambio 
-        left join cartoes on vendas.sk_cartoes = cartoes.sk_cartoes        
-        left join clientes on vendas.sk_clientes = clientes.sk_clientes   
-        left join localizacoes on vendas.sk_localizacoes = localizacoes.sk_localizacoes   
-        left join produtos on vendas.sk_produtos = produtos.sk_produtos   
-        left join razao on vendas.sk_razao = razao.sk_razao    
+        left join cambio on vendas.fk_cambio = cambio.sk_cambio    
+        left join cartoes on vendas.fk_cartoes = cartoes.sk_cartoes    
+        left join clientes on vendas.fk_clientes = clientes.sk_clientes  
+        left join localizacoes on vendas.fk_localizacoes = localizacoes.sk_localizacoes   
+        left join produtos on vendas.fk_produtos = produtos.sk_produtos     
+        left join razao on vendas.fk_razao = razao.sk_razao      
     )
 
 select *

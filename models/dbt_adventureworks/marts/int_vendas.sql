@@ -55,5 +55,5 @@ with
         from joined 
     )
     
-select*
-from joined 
+select *
+from transformacoes 

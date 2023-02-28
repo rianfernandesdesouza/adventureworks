@@ -35,19 +35,16 @@ with
     )
 
     , joined as (
-        select
-            id_pedidos_vendas				
-            , numero_revisao 				
+        select 				
+            numero_revisao 				
             , data_pedido 				
             , data_vencimento 				
             , data_envio				
             , status_pedido  				
             , flag_pedido_online				
             , numero_pedido_compra				
-            , numero_conta				
-            , id_cliente 				
-            , id_pessoa_venda				
-            , id_territorio  				
+            , numero_conta				 				
+            , id_pessoa_venda								
             , id_conta_para_endereco 				
             , id_envio_para_endereco 				
             , id_metodo_envio 							
@@ -56,17 +53,14 @@ with
             , valor_imposto 				
             , frete 				
             , total_devido 				
-            , comentario 				
-            , rowguid  				
-            , data_modificacao_pedidos_vendas_header
-            , id_pedidos_vendas  			
+            , comentario 				  				
+            , data_modificacao_pedidos_vendas_header  			
             , id_pedidos_vendas_detalhes  			
             , numero_rastreamento_operadora  			
             , quantidade_pedido 						
             , id_oferta_especial 			
             , preco_unitario 			
-            , preco_unitario_desconto 			
-            , rowguid   			
+            , preco_unitario_desconto 			  			
             , data_modificacao_pedidos_vendas_detalhes       
             , cambio.sk_cambio as fk_cambio
             , cartoes.sk_cartoes as fk_cartoes
@@ -78,10 +72,10 @@ with
         from vendas
         left join cambio on vendas.id_taxa_cambio = cambio.id_taxa_cambio    
         left join cartoes on vendas.id_cartao_credito = cartoes.id_cartao_credito    
-        left join clientes on vendas.id_entidade_negocio = clientes.id_entidade_negocio  
+        left join clientes on vendas.id_pedidos_vendas = clientes.id_entidade_negocio  
         left join localizacoes on vendas.id_conta_para_endereco = localizacoes.id_endereco    
         left join produtos on vendas.id_produto = produtos.id_produto     
-        left join razao on vendas.id_razao_vendas = razao.id_razao_vendas    
+        left join razao on vendas.id_pedidos_vendas = razao.id_razao_vendas    
     )
 
 select *
